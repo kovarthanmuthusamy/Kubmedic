@@ -1,0 +1,3 @@
+# Ollama models used by KubeMedic, one per line. `make models` pulls them.
+# Chosen on day 1-2 after checking which current models list tool support.
+# Volta (GV100) has no native bf16, so prefer quantized GGUF builds.

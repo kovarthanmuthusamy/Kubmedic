@@ -1,0 +1,12 @@
+[Unit]
+Description=Ollama (local LLM server for KubeMedic)
+After=network-online.target
+
+[Service]
+User=@USER@
+ExecStart=@HOME@/.local/bin/ollama serve
+Environment=OLLAMA_HOST=127.0.0.1:11434
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
